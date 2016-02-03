@@ -1,7 +1,12 @@
 <Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" actionBarHidden="true">
-  <StackLayout>
-    <Label text="Tap the button" class="title"/>
-    <Button text="TAP" tap="{{ tapAction }}" />
-    <Label text="{{ message }}" class="message" textWrap="true"/>
+  <StackLayout orientation="vertical">
+    <TextField width="300px" text="{{txtKeyword}}" hint="search keyword" />
+
+    <Button text="Search" height="50px" style="background-color:green;width:300px;border:none;font-size:20px;" tap="signin"/>
+    <ListView items="{{ images }}" >
+      <ListView.itemTemplate>
+        <Image stretch="fill" height="200px" src="{{img}}" />
+      </ListView.itemTemplate>
+    </ListView>
   </StackLayout>
 </Page>

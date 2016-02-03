@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" actionBarHidden="true">
+  <Page.actionBar>
+    <ActionBar title="" android.icon=""/>
+  </Page.actionBar>
+  <GridLayout>
+    <!-- Add UI declaration here -->
+    <Button text="Start App"  horizontalAlignment="center" height="100px"  tap="{{ startApp }}" />
+  </GridLayout>
+</Page>

@@ -1,0 +1,9 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" navigatedTo="navigatedTo" actionBarHidden="true" actionBarHidden="true">
+  <Page.actionBar>
+    <ActionBar title="" android.icon=""/>
+  </Page.actionBar>
+  <StackLayout cssClass="container" orientation="vertical" height="100px" horizontalAlignment="stretch" verticalAlignment="top" style.background-color="#FFCC00">
+    <Label text="TESING OLAYIMIZ" horizontalAlignment="center"  verticalAlignment="center"  width="auto" margin="50px 0 0 0"/>
+  </StackLayout>
+</Page>
+

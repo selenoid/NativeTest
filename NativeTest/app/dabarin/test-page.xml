@@ -1,0 +1,6 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" actionBarHidden="true">
+  <StackLayout orientation="vertical">
+    <Image stretch="none" height="200px" src="{{myImg}}" />
+    <Label text="{{testVal}}" />
+  </StackLayout>
+</Page>
