@@ -20,6 +20,7 @@ vm.setDelegate = function (_delegate) {
 }
 
 vm.listViewItemTap = function (args) {
+    
     try {
         selectItem({ view:args.view, index:args.index});
     } catch (error) {
@@ -60,6 +61,16 @@ vm.initApp = function(dataBundle) {
 vm.actionGo = function() {
     this.set("initialValue", "The New Value " + getRandom(10));
 };
+
+vm.showToast = function(args) {
+    console.log("showing toast...");
+    
+    var page = args.object;
+    if(page.android) {
+        var Toast = android.widget.Toast;
+        Toast.makeText(application.android.context, "Hello World", Toast.LENGTH_LONG).show();
+    }
+}
 
 function selectItem (selectionDataItem) {
     try {
