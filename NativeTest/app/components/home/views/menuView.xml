@@ -18,9 +18,9 @@
 
           <StackLayout orientation="vertical" horizontalAlignment="left" verticalAlignment="top" width="stretch" height="auto;">
             <GridLayout class="menu-item" colSpan="3" columns="50%,*,60%" height="auto" >
-              <Image row="0" col="0" src="~/images/ui/picmenuikon.png"   cssClass="id-type" horizontalAlignment="left" verticalAlignment="center"/>
-              <Label row="0" col="1" text="{{title}}"             cssClass="title"     horizontalAlignment="left"  verticalAlignment="center" colspan="2"/>
-              <Label row="0" col="2" text="{{itemId}}"            cssClass="id-item"   horizontalAlignment="right"   verticalAlignment="center"/>
+              <Image row="0" col="0" src="~/images/ui/picmenuikon.png"   cssClass="id-type" horizontalAlignment="left" verticalAlignment="center" itemTap="{{ listViewItemImageTap }}"/>
+              <Label row="0" col="1" text="{{title}}"             cssClass="title"     horizontalAlignment="left"  verticalAlignment="center" colspan="2" itemTap="{{ listViewItemLabelTap }}"/>
+              <Label row="0" col="2" text="{{itemId}}"            cssClass="id-item"   horizontalAlignment="right"   verticalAlignment="center"  itemTap="{{ listViewItemLabelTap }}"/>
             </GridLayout>
             <Image src="~/images/ui/liner.png" horizontalAlignment="center" verticalAlignment="center" stretch="fill" height="1px"/>
           </StackLayout>

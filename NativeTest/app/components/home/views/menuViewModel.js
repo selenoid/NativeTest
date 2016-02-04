@@ -21,8 +21,31 @@ vm.setDelegate = function (_delegate) {
 
 vm.listViewItemTap = function (args) {
     
+    logger.log("item tap...");
+    showToast(args);
     try {
-        selectItem({ view:args.view, index:args.index});
+        
+        //selectItem({ view:args.view, index:args.index});
+    } catch (error) {
+        console.error(error.toString());
+    }
+}
+
+vm.listViewItemImageTap = function (args) {
+    logger.log("item Image tap...");
+    try {
+        
+        //selectItem({ view:args.view, index:args.index});
+    } catch (error) {
+        console.error(error.toString());
+    }
+}
+
+vm.listViewItemLabelTap = function (args) {
+    logger.log("item label tap...");
+    try {
+        
+        //selectItem({ view:args.view, index:args.index});
     } catch (error) {
         console.error(error.toString());
     }
@@ -62,10 +85,11 @@ vm.actionGo = function() {
     this.set("initialValue", "The New Value " + getRandom(10));
 };
 
-vm.showToast = function(args) {
+function showToast(args) {
     console.log("showing toast...");
     
     var page = args.object;
+    
     if(page.android) {
         var Toast = android.widget.Toast;
         Toast.makeText(application.android.context, "Hello World", Toast.LENGTH_LONG).show();
