@@ -1,10 +1,9 @@
 
 var observable = require("data/observable");
 var utilsModule = new observable.Observable();
-var logFilterTag = 'tag';
+var logFilterTag = '';
 
 utilsModule.log = function (params) {
-    
     function checkTag(tagId) {
         var retval = logFilterTag.indexOf(tagId);
         return (retval > -1);

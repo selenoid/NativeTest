@@ -1,29 +1,35 @@
-var application = require("application");
+var application = require('application');
+var serviceUtil = require('./components/util/serviceUtil.js');
+var logger = require('./components/util/util.js');
 var appModule = require('./appModel.js');
 
-application.mainModule = "components/home/views/testPage";
+application.mainModule = "components/home/views/mainView";
 application.cssFile = "./app.css";
 
-application.on(application.launchEvent, function (args) { 
-    console.info("application inited..");
-    
+// START_CUSTOM_CODE_nativeScriptApp
+// Add custom code here. For more information about custom code, see http://docs.telerik.com/platform/screenbuilder/troubleshooting/how-to-keep-custom-code-changes
+
+application.on(application.launchEvent, function (args) {
     if (args.android) {
         // For Android applications, args.android is an android.content.Intent class.
-        console.log("Launched Android application with the following intent: " + args.android + ".");
-        var activity = application.android.startActivity;
+        logger.log("Launched Android application with the following intent: " + args.android + ".");
+        appModule.initModule (application.android);
         
-        appModule.initModule(application.android);
     } else if (args.ios !== undefined) {
-        
         // For iOS applications, args.ios is NSDictionary (launchOptions).
-        console.log("Launched iOS application with options: " + args.ios);
+        logger.log("Launched iOS application with options: " + args.ios);
         
         try {
             appModule.initModule(application.ios);
-        }catch (error) {
-            console.log("error in application init : " + error.toString());
+        }catch(error){
+            logger.log("error in application init : "+ error.toString());
         }
+        
     }
 });
 
+logger.log('application started...');
+
+
+// END_CUSTOM_CODE_nativeScriptApp
 application.start();
