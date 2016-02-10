@@ -9,7 +9,7 @@ exports.pageLoaded = function(args) {
 exports.navigatedTo = function (args) {
     
     logger.log("category view loaded...");
-    /*
+    
     var page = args.object;
     page.bindingContext = viewModel;
     
@@ -18,5 +18,5 @@ exports.navigatedTo = function (args) {
     
     
     var dataBundle = page.navigationContext;
-    viewModel.initApp(dataBundle,listView);*/
+    viewModel.initApp(dataBundle,listView);
 };

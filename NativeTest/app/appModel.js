@@ -118,6 +118,8 @@ appModel.changeView = function (serviceResult) {
             break;
     }
     
+    logger.log("trying to start screen change...");
+    
     var topmost = frameModule.topmost();
     topmost.navigate(navigationEntry);
     

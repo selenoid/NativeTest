@@ -22,10 +22,10 @@ vm.setDelegate = function (_delegate) {
 vm.listViewItemTap = function (args) {
     
     logger.log("item tap...");
-    showToast(args);
+
     try {
-        
-        //selectItem({ view:args.view, index:args.index});
+        logger.log("selection melection..");
+        selectItem({ view:args.view, index:args.index});
     } catch (error) {
         console.error(error.toString());
     }
@@ -86,14 +86,16 @@ vm.actionGo = function() {
 };
 
 function showToast(args) {
-    console.log("showing toast...");
     
+    /*
     var page = args.object;
-    
+    alert("Showy showy...");
+    */
+    /*
     if(page.android) {
         var Toast = android.widget.Toast;
         Toast.makeText(application.android.context, "Hello World", Toast.LENGTH_LONG).show();
-    }
+    }*/
 }
 
 function selectItem (selectionDataItem) {

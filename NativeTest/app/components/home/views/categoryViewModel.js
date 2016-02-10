@@ -49,7 +49,9 @@ function refreshImages(e) {
 }
 
 vm.setListData = function (viewData) {
+    
     this.nuViewData = viewData;
+    
     logger.info("*********setting data model in categoryViewModel..." + this.nuViewData);
     
     listItemDict = {};
@@ -103,18 +105,22 @@ vm.setListData = function (viewData) {
         
     }
     
-    setTimeout(digiloo, 2000);
+    //setTimeout(digiloo, 2000);
 }
 
 vm.initApp = function(dataBundle, lv) {
+    
     logger.info("*******set dataBundle in categoryViewModel...");
+    
     this.set('listItems', listItems);
     
     try {
         vm.setDelegate(dataBundle.viewDelegate);
         vm.setListData(dataBundle.viewData);
+        
         this.listView = lv;
-        logger.log("tag3", "this.listView: " + this.listView);
+        
+        logger.log("tag3", "SAPANCAA KAVGA VAR@: " + this.listView);
     }catch (e) {
         logger.info("Error initing category app..." + e.toString() + " (" + dataBundle.viewData + ")");
     }
@@ -145,11 +151,17 @@ function selectItem (selectionDataItem) {
 }
 
 function updateImages(event) {
-    listView.refresh();
+    
+    logger.log("update Images :: event : "  + event.key + "");
+    //listView.refresh();
+    
     /*var item = listItemDict[event.key];
     item.imageUrl = imageSource.fromNativeSource(event.image);
+    
     refresh();
-    listView.refresh();*/
+    
+    //listView.refresh();*/
+    
 }
 
 function digiloo () {

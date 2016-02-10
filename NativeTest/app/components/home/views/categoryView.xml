@@ -1,4 +1,4 @@
-<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" navigatedTo="navigatedTo" actionBarHidden="false">
+<Page xmlns="http://www.nativescript.org/tns.xsd" loaded="pageLoaded" navigatedTo="navigatedTo" actionBarHidden="true">
 
   <StackLayout cssClass="wrapper" orientation="vertical" height="auto" horizontalAlignment="stretch" verticalAlignment="top" style.background-color="#FFCC00">
     
@@ -13,7 +13,7 @@
     <StackLayout cssClass="content-wrapper" orientation="vertical" height="auto" horizontalAlignment="stretch" verticalAlignment="top"  >
       <ListView id="listView" items="{{ listItems }}"
                 itemTap="{{ listViewItemTap }}" 
-                cssClass="viewList" separatorColor="rgba(00000000)"  height="auto">
+                cssClass="viewList" separatorColor="#ffffff"  height="auto">
 
         <ListView.itemTemplate >
 
